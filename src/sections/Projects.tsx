@@ -10,6 +10,14 @@ import web from "../../public/images/web.png";
 import what from "../../public/images/what.png";
 import guard from "../../public/images/guard.png";
 
+// New project images
+import aiSupportBot from "../../public/images/ai_support_bot.png";
+import cropYieldPrediction from "../../public/images/crop_yield_prediction.png";
+import medialert from "../../public/images/medialert.png";
+import stockx from "../../public/images/stockx.png";
+import collabboard from "../../public/images/collabboard.png";
+import volunteerConnect from "../../public/images/volunteer_connect.png";
+
 import { Tabs } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +28,71 @@ import { motion } from "framer-motion";
 import { Globe2 } from "lucide-react";
 
 const sideProjects = [
+  {
+    name: "AI Support Bot – RAG-based Customer Support",
+    description:
+      "Built RAG-based chatbot using embeddings, FastAPI, Next.js for context-aware responses. Designed end-to-end pipeline with Supabase, pgvector for retrieval and response generation. Implemented LangChain, LangGraph workflows enabling structured reasoning and conditional routing. Reduced hallucinations, improved accuracy using optimized prompts, retrieval with Llama 3.3.",
+    image: aiSupportBot,
+    link: "https://ai-support-bot-rag.vercel.app/",
+    repo: "https://github.com/Adii1106/AI-Support-Bot-RAG-",
+    tech: ["Next.js", "FastAPI", "Supabase", "pgvector", "LangChain", "LangGraph", "Llama 3.3", "Embeddings"],
+    isTopProject: true,
+    isNextjs: true,
+    isMern: false,
+    isHtmlCss: false,
+  },
+  {
+    name: "CollabBoard – Real-time Collaborative Whiteboard",
+    description:
+      "Developed real-time whiteboard using React, TypeScript, Socket.IO with sub-100ms synchronization. Handled concurrency challenges using WebSockets, Node.js for real-time multi-user collaboration. Built scalable backend using Node.js, PostgreSQL, Prisma ORM for data management. Deployed full-stack application on Vercel, Render with version control via GitHub.",
+    image: collabboard,
+    link: "https://collab-board-snowy.vercel.app/",
+    repo: "https://github.com/Adii1106/CollabBoard",
+    tech: ["React", "TypeScript", "Socket.IO", "WebSockets", "Node.js", "PostgreSQL", "Prisma ORM", "Express.js"],
+    isTopProject: true,
+    isNextjs: false,
+    isMern: true,
+    isHtmlCss: false,
+  },
+  {
+    name: "StockX – Real-time Stock Trading Dashboard",
+    description:
+      "Built a full-stack real-time stock dashboard using React and Node.js with live price tracking and watchlists. Diagnosed and fixed API latency and inconsistent data issues during real-time updates. Implemented JWT-based authentication with protected routes for secure user sessions. High-fidelity analytics visualizations integrated with Recharts.",
+    image: stockx,
+    link: "https://stock-x-eta.vercel.app/",
+    repo: "https://github.com/Adii1106/StockX",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs", "Recharts", "Vite"],
+    isTopProject: true,
+    isNextjs: false,
+    isMern: true,
+    isHtmlCss: false,
+  },
+  {
+    name: "Intelligent Crop Yield Prediction System",
+    description:
+      "Built ML model using Python, Scikit-learn to predict crop yield accurately. Performed feature engineering, preprocessing using Pandas, NumPy to improve accuracy. Extended into agentic AI assistant generating structured farming recommendations using LLMs. Integrated LLM-based reasoning to analyze predictions, risks via Streamlit-based interface.",
+    image: cropYieldPrediction,
+    link: "https://crop-yield-ai-diwp6s4xppu3jkn6eafbhi.streamlit.app/",
+    repo: "https://github.com/Vansh0204/Crop-Yield-AI",
+    tech: ["Python", "Scikit-learn", "Streamlit", "Pandas", "NumPy", "LLMs", "Agentic AI"],
+    isTopProject: true,
+    isNextjs: false,
+    isMern: false,
+    isHtmlCss: false,
+  },
+  {
+    name: "Volunteer-Connect",
+    description:
+      "Developed a full-stack volunteer management platform supporting volunteers and organizers with event workflows. Built secure REST APIs with JWT authentication and implemented event signup and attendance tracking systems. Designed scalable backend services and managed database operations using Prisma ORM.",
+    image: volunteerConnect,
+    link: "https://volunteer-connect-frontend-orpin.vercel.app/",
+    repo: "https://github.com/Adii1106/VolunteerConnect",
+    tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "SQLite", "Prisma ORM", "JWT", "REST APIs"],
+    isTopProject: true,
+    isNextjs: false,
+    isMern: true,
+    isHtmlCss: false,
+  },
   {
     name: "Hand Gesture Rock-Paper-Scissors",
     description:
@@ -47,14 +120,14 @@ const sideProjects = [
     isHtmlCss: false,
   },
   {
-    name: "Krekens",
+    name: "MediAlert – Medicine & Dose Reminder App",
     description:
-      "Developed Krekens, a modern and visually engaging website built using React and Tailwind CSS. Designed to showcase the team’s projects, achievements, and collaborative spirit with smooth animations and responsive layouts. Focused on building a clean, scalable frontend architecture and delivering a dynamic user experience.",
-    image: krakens,
-    link: "https://the-krekens.vercel.app/",
-    repo: "https://github.com/Harshit-jain-57/The-Kreken-Kins",
-    tech: ["React", "TailwindCSS", "JavaScript", "Vite"],
-    isTopProject: false,
+      "Developed MediAlert using React Native Expo for medicine scheduling, reminders, and dose tracking. Implemented local storage and notification features using AsyncStorage and Expo Notifications services. Built multi-screen navigation for medicine management, schedules, missed doses, history, and profiles. Used Context API and reusable components for centralized medicine and caretaker data management.",
+    image: medialert,
+    link: "",
+    repo: "https://github.com/Adii1106/MediAlert",
+    tech: ["React Native", "Expo", "JavaScript", "AsyncStorage", "Expo Notifications", "Context API"],
+    isTopProject: true,
     isNextjs: false,
     isMern: false,
     isHtmlCss: false,
@@ -68,6 +141,19 @@ const sideProjects = [
     repo: "https://github.com/Adii1106/MAD_Project",
     tech: ["React Native", "Expo", "JavaScript", "AsyncStorage", "Location API"],
     isTopProject: true,
+    isNextjs: false,
+    isMern: false,
+    isHtmlCss: false,
+  },
+  {
+    name: "Krekens",
+    description:
+      "Developed Krekens, a modern and visually engaging website built using React and Tailwind CSS. Designed to showcase the team’s projects, achievements, and collaborative spirit with smooth animations and responsive layouts. Focused on building a clean, scalable frontend architecture and delivering a dynamic user experience.",
+    image: krakens,
+    link: "https://the-krekens.vercel.app/",
+    repo: "https://github.com/Harshit-jain-57/The-Kreken-Kins",
+    tech: ["React", "TailwindCSS", "JavaScript", "Vite"],
+    isTopProject: false,
     isNextjs: false,
     isMern: false,
     isHtmlCss: false,
@@ -96,7 +182,7 @@ const sideProjects = [
     isTopProject: false,
     isNextjs: false,
     isMern: false,
-    isHtmlCss: false,
+    isHtmlCss: true,
   },
   {
     name: "WhatsBlitz",
@@ -109,7 +195,7 @@ const sideProjects = [
     isTopProject: false,
     isNextjs: false,
     isMern: false,
-    isHtmlCss: false,
+    isHtmlCss: true,
   },
   {
     name: "Tic Tac Toe",
@@ -122,16 +208,17 @@ const sideProjects = [
     isTopProject: false,
     isNextjs: false,
     isMern: false,
-    isHtmlCss: false,
+    isHtmlCss: true,
   },
 ];
 
 const projects = [
-  sideProjects[0],
-  sideProjects[1],
-  sideProjects[2],
-  sideProjects[3],
-  sideProjects[4],
+  sideProjects[0], // AI Support Bot
+  sideProjects[1], // CollabBoard
+  sideProjects[2], // StockX
+  sideProjects[3], // Intelligent Crop Yield Prediction System
+  sideProjects[4], // Volunteer-Connect
+  sideProjects[5], // Hand Gesture Rock-Paper-Scissors
 ];
 
 export function ProjectsSection() {
